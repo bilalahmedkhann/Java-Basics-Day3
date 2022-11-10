@@ -4,6 +4,8 @@ public class Main {
         mObj.element();
         mObj.even();
         mObj.largest();
+        mObj.occur();
+        mObj.odd();
 
     }
 
@@ -37,6 +39,29 @@ public class Main {
         }
 
         System.out.println(largest + " is largest number of given array");
+    }
+
+    //    Java Program to find the frequency of each element in the array
+    public void occur() {
+        int[] arr = {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6};
+        int n = arr.length;
+        //countFreq(arr, n);
+        boolean[] visited = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            if (visited[i])
+                continue;
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
+                    visited[j] = true;
+                    count++;
+                }
+            }
+            System.out.println(arr[i] + " => " + count + " times");
+        }
+
+
     }
 
 
