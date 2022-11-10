@@ -3,6 +3,7 @@ public class Main {
         Main mObj = new Main();
         mObj.element();
         mObj.even();
+        mObj.largest();
 
     }
 
@@ -22,6 +23,20 @@ public class Main {
                 System.out.println(i + " is even position of index");
             }
         }
+    }
+
+    //    Java Program to print the largest element in an array
+    public void largest() {
+        int large = 0;
+        int arr[] = {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76};
+        int largest = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                largest = arr[i];
+            }
+        }
+
+        System.out.println(largest + " is largest number of given array");
     }
 
 
