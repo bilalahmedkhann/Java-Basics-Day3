@@ -6,6 +6,7 @@ public class Main {
         mObj.largest();
         mObj.occur();
         mObj.odd();
+        mObj.reverse();
 
     }
 
@@ -60,7 +61,7 @@ public class Main {
             }
             System.out.println(arr[i] + " => " + count + " times");
         }
-        
+
     }
 
     //    Java Program to print the elements of an array present on odd position
@@ -70,6 +71,15 @@ public class Main {
             if (arr[i] % 2 != 0) {
                 System.out.println(i + " is odd position of index");
             }
+        }
+
+    }
+
+    //    Java Program to print the elements of an array in reverse order
+    public void reverse() {
+        int arr[] = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
         }
 
     }
