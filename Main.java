@@ -60,7 +60,17 @@ public class Main {
             }
             System.out.println(arr[i] + " => " + count + " times");
         }
+        
+    }
 
+    //    Java Program to print the elements of an array present on odd position
+    public void odd() {
+        int arr[] = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                System.out.println(i + " is odd position of index");
+            }
+        }
 
     }
 
