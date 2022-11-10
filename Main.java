@@ -7,6 +7,7 @@ public class Main {
         mObj.occur();
         mObj.odd();
         mObj.reverse();
+        mObj.smallest();
 
     }
 
@@ -82,6 +83,20 @@ public class Main {
             System.out.print(arr[i] + " ");
         }
 
+    }
+
+    //    Java Program to print the smallest element in an array
+    public void smallest() {
+
+        int[] arr = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        int smallest = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < smallest) {
+                smallest = arr[i];
+            }
+        }
+
+        System.out.println(smallest + " is smallest number of given array");
     }
 
 
