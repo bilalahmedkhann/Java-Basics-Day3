@@ -8,6 +8,7 @@ public class Main {
         mObj.odd();
         mObj.reverse();
         mObj.smallest();
+        mObj.ascending();
 
     }
 
@@ -21,7 +22,7 @@ public class Main {
 
     //    Java Program to print the elements of an array present on an even position
     public void even() {
-        int arr[] = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        int[] arr = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
                 System.out.println(i + " is even position of index");
@@ -31,8 +32,7 @@ public class Main {
 
     //    Java Program to print the largest element in an array
     public void largest() {
-        int large = 0;
-        int arr[] = {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76};
+        int[] arr = {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76};
         int largest = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > largest) {
@@ -67,7 +67,7 @@ public class Main {
 
     //    Java Program to print the elements of an array present on odd position
     public void odd() {
-        int arr[] = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        int[] arr = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 != 0) {
                 System.out.println(i + " is odd position of index");
@@ -78,7 +78,7 @@ public class Main {
 
     //    Java Program to print the elements of an array in reverse order
     public void reverse() {
-        int arr[] = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        int[] arr = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i] + " ");
         }
@@ -97,6 +97,26 @@ public class Main {
         }
 
         System.out.println(smallest + " is smallest number of given array");
+    }
+
+    //Java Program to sort the elements of an array in ascending order
+    public void ascending() {
+        int[] arr = {101, 4, 1, 23, 21, 11, 34, 76, 43, 22, 43, 76, 95};
+        int temp;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("Elements of array sorted in ascending order: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 
 
