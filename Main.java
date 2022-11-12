@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Main mObj = new Main();
@@ -10,6 +12,9 @@ public class Main {
         mObj.smallest();
         mObj.ascending();
         mObj.second_largest();
+        mObj.duplicate();
+        Scanner sc = new Scanner(System.in);
+        int choice
 
     }
 
@@ -138,9 +143,26 @@ public class Main {
                 }
             }
         }
-        System.out.println("{10, 20, 25, 63, 96, 57}\n" +
-                " second largest number is:: " + array[n - 2]);
+        System.out.println("Given array is {10, 20, 25, 63, 96, 57} and \n" +
+                "second largest number is:: " + array[n - 2]);
     }
 
+//    Java Program to print the duplicate elements of an array
 
+    public void duplicate() {
+
+        int [] arr = new int [] {1, 2, 3, 4, 2, 7, 8, 8, 3,5,8,6,4,2};
+
+
+        System.out.println("Given array is {1, 2, 3, 4, 2, 7, 8, 8, 3,5,8,6,4,2} & Duplicate elements are: ");
+
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i + 1; j < arr.length; j++) {
+                if(arr[i] == arr[j])
+                    System.out.print(arr[j]+" ");
+            }
+        }
+    }
 }
+
+
