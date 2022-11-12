@@ -13,7 +13,7 @@ public class Main {
         mObj.ascending();
         mObj.second_largest();
         mObj.duplicate();*/
-        System.out.println("Enter question number to get its code:\n" +
+        System.out.print("Enter question number to get its code:\n" +
                 "1) Java Program to print the elements of an array\n" +
                 "2) Java Program to print the elements of an array present on an even position\n" +
                 "3) Java Program to print the largest element in an array\n" +
@@ -29,24 +29,26 @@ public class Main {
         int choice = sc.nextInt();
         if (choice == 1) {
             mObj.element();
-        } else if (choice==2){
+        } else if (choice == 2) {
             mObj.even();
-        } else if (choice ==3) {
+        } else if (choice == 3) {
             mObj.largest();
-        } else if (choice ==4) {
+        } else if (choice == 4) {
             mObj.occur();
-        }else if (choice ==5) {
+        } else if (choice == 5) {
             mObj.odd();
-        }else if (choice ==6) {
+        } else if (choice == 6) {
             mObj.reverse();
-        }else if (choice ==7) {
+        } else if (choice == 7) {
             mObj.smallest();
-        }else if (choice ==8) {
+        } else if (choice == 8) {
             mObj.ascending();
-        }else if (choice ==9) {
+        } else if (choice == 9) {
             mObj.second_largest();
-        }else if (choice ==10) {
+        } else if (choice == 10) {
             mObj.duplicate();
+        } else {
+            System.out.println("Invalid Input");
         }
 
     }
@@ -54,7 +56,7 @@ public class Main {
     //    Java Program to print the elements of an array
     public void element() {
         int[] arr = {1, 3, 5, 6, 3, 54, 63, 21, 65};
-        System.out.println("Given array is {1, 3, 5, 6, 3, 54, 63, 21, 65} and ans is : " );
+        System.out.println("Given array is {1, 3, 5, 6, 3, 54, 63, 21, 65} and ans is : ");
         for (int j : arr) {
             System.out.print(j + " ");
         }
@@ -74,7 +76,7 @@ public class Main {
     //    Java Program to print the largest element in an array
     public void largest() {
         int[] arr = {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76};
-        System.out.println("Given array is {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76} and ans is : " );
+        System.out.println("Given array is {101, 4, 23, 21, 11, 34, 76, 43, 22, 43, 76} and ans is : ");
         int largest = arr[0];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > largest) {
@@ -88,7 +90,7 @@ public class Main {
     //    Java Program to find the frequency of each element in the array
     public void occur() {
         int[] arr = {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6};
-        System.out.println("Given array is {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6} and ans is : " );
+        System.out.println("Given array is {1, 2, 3, 4, 7, 3, 4, 6, 4, 6, 3, 35, 5, 5, 35, 322, 3, 5, 6, 6} and ans is : ");
         int n = arr.length;
         //countFreq(arr, n);
         boolean[] visited = new boolean[n];
