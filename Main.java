@@ -9,6 +9,7 @@ public class Main {
         mObj.reverse();
         mObj.smallest();
         mObj.ascending();
+        mObj.second_largest();
 
     }
 
@@ -116,7 +117,29 @@ public class Main {
         System.out.println("Elements of array sorted in ascending order: ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
+
         }
+        System.out.println(" ");
+    }
+
+    //    Find 2nd Largest Number in an Array
+    public void second_largest() {
+        int temp, n;
+        int array[] = {10, 20, 25, 63, 96, 57};
+        n = array.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+
+                if (array[i] > array[j]) {
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        System.out.println("{10, 20, 25, 63, 96, 57}\n" +
+                " second largest number is:: " + array[n - 2]);
     }
 
 
